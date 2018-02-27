@@ -1,24 +1,23 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
-//        int counter = 0;
 
-//        do {
-//            System.out.println(counter);
-//            counter += 2;
-//        } while (counter <= 100);
 
-//        int counter = 100;
-////
-////        do {
-////            System.out.println(counter);
-////            counter -= 5;
-////        } while (counter >= -10);
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.print(i + " ");
+//        }
 
-        long counter = 2;
 
-        do {
-            System.out.println(counter);
-            counter *= counter;
-        } while (counter <= 1000000);
+//        for (int i = 0; i <= 100; i+=2) {
+//            System.out.println(i);
+//        }
+
+//        for (int i = 100; i >= -10; i-=5) {
+//            System.out.println(i);
+//        }
+
+
+        for (long i = 2; i <= 1000000; i *= i) {
+            System.out.println(i);
+        }
     }
 }
