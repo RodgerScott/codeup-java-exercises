@@ -5,34 +5,36 @@ public class ConsoleExercises {
         Scanner ip = new Scanner(System.in);
 
 //Exercise 1.
-//        int userInput;
-//        System.out.print("Please enter a number: ");
-//        userInput = ip.nextInt();
-//
-//        System.out.println("You entered: \"" + userInput + "\"");
+        int userInput;
+        System.out.print("Please enter a number: ");
+        userInput = ip.nextInt();
+
+        System.out.println("You entered: \"" + userInput + "\"");
 
 //Exercise 2.
-//        String wordOne;
-//        String wordTwo;
-//        String wordThree;
-//
-//        System.out.print("Please enter 3 words: ");
-//        wordOne = ip.next();
-//        wordTwo = ip.next();
-//        wordThree = ip.next();
-//
-//        System.out.println("Your first word was: " + wordOne);
-//        System.out.println("You second word was: " + wordTwo);
-//        System.out.println("You third word was: " + wordThree);
+        String wordOne;
+        String wordTwo;
+        String wordThree;
+
+        System.out.println("Please enter 3 words: ");
+        wordOne = ip.next();
+        wordTwo = ip.next();
+        wordThree = ip.next();
+
+        System.out.println("Your first word was: " + wordOne);
+        System.out.println("You second word was: " + wordTwo);
+        System.out.println("You third word was: " + wordThree);
+
+        ip.nextLine();
 
 //Exercise 3.
-//        String newUserInput;
-//
-//        System.out.print("Please enter a sentence: ");
-//
-//        newUserInput = ip.nextLine();
-//
-//        System.out.println("Your sentence was: " + newUserInput);
+        String newUserInput;
+
+        System.out.println("Please enter a sentence: ");
+
+        newUserInput = ip.nextLine();
+
+        System.out.println("Your sentence was: " + newUserInput);
 
 //Exercise 4.
 
@@ -40,11 +42,11 @@ public class ConsoleExercises {
     double width;
     double height;
 
-        System.out.print("Please enter the length, in feet: ");
+        System.out.println("Please enter the length, in feet: ");
         length = ip.nextDouble();
-        System.out.print("Please enter the width, in feet: ");
+        System.out.println("Please enter the width, in feet: ");
         width = ip.nextDouble();
-        System.out.print("Please enter the height, in feet: ");
+        System.out.println("Please enter the height, in feet: ");
         height = ip.nextDouble();
 
 
