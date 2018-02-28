@@ -22,12 +22,37 @@ public class ControlFlowExercises {
             }
             if (entry <= 79 && entry > 66) {
                 System.out.println("You got a C");
+                if (entry > 76) {
+                    System.out.println("+");
+                }
+                if (entry < 69) {
+                    System.out.println("-");
+                } else {
+                    System.out.println();
+                }
             }
-            if (entry <= 87 && entry > 79) {
+            if (entry <= 89 && entry > 79) {
                 System.out.println("You got a B");
+                if (entry > 87) {
+                    System.out.println("+");
+                }
+                if (entry < 83) {
+                    System.out.println("-");
+                } else {
+                    System.out.println();
+                }
             }
-            if (entry <= 100 && entry > 87) {
-                System.out.println("You got an A");
+            if (entry <= 100 && entry > 89) {
+                System.out.print("You got an A");
+                if (entry > 97) {
+                    System.out.println("+");
+                }
+                if (entry < 93) {
+                    System.out.println("-");
+                } else {
+                    System.out.println();
+                }
+
             }
 
             scan.nextLine();
