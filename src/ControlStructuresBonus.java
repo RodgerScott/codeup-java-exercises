@@ -86,5 +86,17 @@ public class ControlStructuresBonus {
         if (enteredName.contains("y") ) {
             System.out.println("You have a \"y\" in your name.");
         }
+
+
+// 5. Print out all times from 1:00am to 12:00pm.
+//         Example:
+// 1:00am
+// 1:01am
+// 1:02am
+// etc.
+//         this will help you for this bonus...
+// https://stackoverflow.com/questions/12421444/how-to-format-a-number-0-9-to-display-with-2-digits-its-not-a-date
+
+
     }
 }
