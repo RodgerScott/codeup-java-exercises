@@ -60,7 +60,7 @@ public class ControlFlowExercises {
             System.out.print("Would you like to continue? y/n  ");
             String answer = scan.nextLine();
 
-            if (answer.equalsIgnoreCase("n")) {
+            if (!answer.equalsIgnoreCase("y")) {
                 yo = 2;
             }
 
