@@ -4,37 +4,42 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        //Table of Powers
+        //Grade Conversions
         Scanner scan = new Scanner(System.in);
-        int good = 1;
+
+        int yo = 1;
 
         do {
 
-            System.out.print("What number would you like to go up to? ");
+            System.out.print("What is your numeric grade? ");
             int entry = scan.nextInt();
-            System.out.println();
 
-            System.out.println("Here is your table!");
-            System.out.println();
-
-            System.out.println("number" + " | " + "squared" + " | " + "cubed");
-            System.out.println("-----" + "  | " + "-------" + " | " + "-----");
-
-            for (int i = 1; i <= entry; i++) {
-
-                System.out.print(i + "      |");
-                System.out.print(" " + i * i + "       |");
-                System.out.println(" " + i * i * i);
+            if (entry <= 59) {
+                System.out.println("You got an F");
             }
+            if (entry <= 66 && entry > 59) {
+                System.out.println("You got a D");
+            }
+            if (entry <= 79 && entry > 66) {
+                System.out.println("You got a C");
+            }
+            if (entry <= 87 && entry > 79) {
+                System.out.println("You got a B");
+            }
+            if (entry <= 100 && entry > 87) {
+                System.out.println("You got an A");
+            }
+
             scan.nextLine();
 
             System.out.print("Would you like to continue? y/n  ");
             String answer = scan.nextLine();
 
             if (answer.equalsIgnoreCase("n")) {
-                good = 2;
+                yo = 2;
             }
-        } while (good == 1);
+
+        } while(yo == 1);
 
     }
 }
