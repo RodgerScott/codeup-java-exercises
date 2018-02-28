@@ -1,21 +1,40 @@
+import java.util.Scanner;
+
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        //Fizzbuzz
+        //Table of Powers
+        Scanner scan = new Scanner(System.in);
+        int good = 1;
 
-        for (int i = 0; i <= 100; i++) {
-            if ( i % 3 == 0 && i % 15 != 0) {
-                System.out.println("fizz");
+        do {
+
+            System.out.print("What number would you like to go up to? ");
+            int entry = scan.nextInt();
+            System.out.println();
+
+            System.out.println("Here is your table!");
+            System.out.println();
+
+            System.out.println("number" + " | " + "squared" + " | " + "cubed");
+            System.out.println("-----" + "  | " + "-------" + " | " + "-----");
+
+            for (int i = 1; i <= entry; i++) {
+
+                System.out.print(i + "      |");
+                System.out.print(" " + i * i + "       |");
+                System.out.println(" " + i * i * i);
             }
-            else if ( i % 5 == 0 && i % 15 != 0) {
-                System.out.println("Buzz");
+            scan.nextLine();
+
+            System.out.print("Would you like to continue? y/n  ");
+            String answer = scan.nextLine();
+
+            if (answer.equalsIgnoreCase("n")) {
+                good = 2;
             }
-            else if (i % 15 == 0) {
-                System.out.println("FizzBuzz");
-            }
-            else {
-                System.out.println(i);
-            }
-        }
+        } while (good == 1);
+
     }
 }
