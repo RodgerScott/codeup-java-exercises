@@ -1,23 +1,21 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
+        //Fizzbuzz
 
-//        for (int i = 5; i <= 15; i++) {
-//            System.out.print(i + " ");
-//        }
-
-
-//        for (int i = 0; i <= 100; i+=2) {
-//            System.out.println(i);
-//        }
-
-//        for (int i = 100; i >= -10; i-=5) {
-//            System.out.println(i);
-//        }
-
-
-        for (long i = 2; i <= 1000000; i *= i) {
-            System.out.println(i);
+        for (int i = 0; i <= 100; i++) {
+            if ( i % 3 == 0 && i % 15 != 0) {
+                System.out.println("fizz");
+            }
+            else if ( i % 5 == 0 && i % 15 != 0) {
+                System.out.println("Buzz");
+            }
+            else if (i % 15 == 0) {
+                System.out.println("FizzBuzz");
+            }
+            else {
+                System.out.println(i);
+            }
         }
     }
 }
