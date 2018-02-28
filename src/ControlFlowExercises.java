@@ -21,7 +21,7 @@ public class ControlFlowExercises {
                 System.out.println("You got a D");
             }
             if (entry <= 79 && entry > 66) {
-                System.out.println("You got a C");
+                System.out.print("You got a C");
                 if (entry > 76) {
                     System.out.println("+");
                 }
@@ -32,7 +32,7 @@ public class ControlFlowExercises {
                 }
             }
             if (entry <= 89 && entry > 79) {
-                System.out.println("You got a B");
+                System.out.print("You got a B");
                 if (entry > 87) {
                     System.out.println("+");
                 }
