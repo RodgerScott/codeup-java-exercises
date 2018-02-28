@@ -1,22 +1,24 @@
 public class StringExercise {
     public static void main(String[] args) {
 
-//        String message = "We don't need no";
-//
-//        System.out.println(message + " education." + "\n" + message + " thought control." );
+        String message = "We don't need no";
 
-//        String message = "Check \"this\" out!, \"s inside of \"s!";
-//
-//        System.out.println(message);
+        message += message + " education." + "\n" + message + " thought control.";
 
-//        String message = "In windows, the main drive is usually C:\\";
-//
-//        System.out.println(message);
+        message += "\n\n";
 
-//        String message = "I can do backslashes \\, double backslashes \\\\," +"\n" +
-//                "and the amazing triple backslashes, \\\\\\!";
-//        System.out.println(message);
+        message += "Check \"this\" out!, \"s inside of \"s!";
 
+        message += "\n\n";
+
+        message += "In windows, the main drive is usually C:\\";
+
+        message += "\n\n";
+
+        message += "I can do backslashes \\, double backslashes \\\\," +"\n" +
+                "and the amazing triple backslashes, \\\\\\!";
+
+        System.out.println(message);
 
     }
 }
