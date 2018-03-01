@@ -130,6 +130,7 @@ public class MethodsExercises {
         Scanner scan = new Scanner(System.in);
         int target = rando();
         boolean end = true;
+        int counter = 0;
 
         System.out.println("Welcome to the Random Number Guessing Game.");
         System.out.println();
@@ -140,13 +141,22 @@ public class MethodsExercises {
             scan.nextLine();
 
             if (value < target) {
-                System.out.println("Guess Higher");
+                System.out.println("Guess Higher" + "\n");
+                counter++;
             }
             else if (value > target) {
-                System.out.println("Guess Lower");
+                System.out.println("Guess Lower" + "\n");
+                counter++;
             }
-            else {
+            else if (value == target){
                 System.out.println("Good Guess!");
+                counter++;
+                System.out.println();
+                System.out.println("You guessed the answer in " + counter + " guesses.");
+                break;
+            }
+            if (counter == 5) {
+                System.out.println("You have not guessed correctly within 5 guesses. Goodbye!");
                 end = false;
             }
         } while (end);
