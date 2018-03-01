@@ -13,10 +13,9 @@ public class MethodsExercises {
 //        System.out.println(remainder(9,2));
 //        System.out.println(factorial(2));
 //        getFactorial();
-//        getDice();
+        getDice();
 //        guessingGame();
 //        System.out.println(recurse(2,5));
-        dnD();
 
 
 
@@ -94,6 +93,9 @@ public class MethodsExercises {
 
     public static void getDice () {
         Scanner scan = new Scanner(System.in);
+        System.out.println();
+        dnD();
+        System.out.println();
 
         System.out.print("Please Enter the number of sides for your dice: ");
         int entry = scan.nextInt();
