@@ -14,7 +14,9 @@ public class MethodsExercises {
 //        System.out.println(factorial(2));
 //        getFactorial();
 //        getDice();
-        guessingGame();
+//        guessingGame();
+        System.out.println(recurse(2,5));
+
 
 
     }
@@ -160,6 +162,16 @@ public class MethodsExercises {
                 end = false;
             }
         } while (end);
+    }
+
+    //Recursive Factoring
+
+    public static int recurse (int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else {
+            return base * recurse(base, exponent - 1);
+        }
     }
 }
 
