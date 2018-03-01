@@ -15,7 +15,9 @@ public class MethodsExercises {
 //        getFactorial();
 //        getDice();
 //        guessingGame();
-        System.out.println(recurse(2,5));
+//        System.out.println(recurse(2,5));
+        dnD();
+
 
 
 
@@ -172,6 +174,16 @@ public class MethodsExercises {
         } else {
             return base * recurse(base, exponent - 1);
         }
+    }
+
+    public static void dnD () {
+        String logo = "| \\        | \\\n" +
+                      "|  \\       |  \\\n" +
+                      "|   \\      |   \\\n" +
+                      "|   /      |   /\n" +
+                      "|  /  |\\ | |  /\n" +
+                      "| /   | \\| | /";
+        System.out.println(logo);
     }
 }
 
