@@ -55,34 +55,24 @@ public class MethodsExercises {
 
         System.out.print("Please enter a number between 1 and 10: ");
         long entry = scan.nextInt();
+        scan.nextLine();
 
         if (entry < 1 || entry > 10) {
             System.out.println("Sorry, that is not a valid number.");
+            System.out.println();
             getFactorial();
+        } else {
+            System.out.println(factorial(entry));
+
+            System.out.println();
+
+            System.out.println("Would you like to play again? y/n");
+            String keepGoing = scan.nextLine();
+
+            if (keepGoing.equalsIgnoreCase("y")) {
+                getFactorial();
+            }
         }
-
-        else {
-
-        }
-
-        System.out.println(factorial(entry));
-
-        System.out.println();
-
-        System.out.println("Would you like to play again? y/n");
-        String keepGoing = scan.nextLine();
-        scan.nextLine();
-        System.out.println();
-
-        if (keepGoing.equalsIgnoreCase("y")) {
-            getFactorial();
-            scan.nextLine();
-        }
-        else {
-            System.out.println("Goodbye");
-        }
-
     }
-
 }
 
