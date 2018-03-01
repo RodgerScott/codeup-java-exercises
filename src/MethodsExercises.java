@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
     public static void main(String[] args) {
@@ -11,7 +12,8 @@ public class MethodsExercises {
 //        System.out.println(division(10, 2));
 //        System.out.println(remainder(9,2));
 //        System.out.println(factorial(2));
-        getFactorial();
+//        getFactorial();
+        getDice();
 
     }
 
@@ -74,5 +76,41 @@ public class MethodsExercises {
             }
         }
     }
+
+    public static int diceRoll (int a) {
+        Random numb = new Random();
+        return numb.nextInt(a) + 1;
+    }
+
+    public static void getDice () {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Please Enter the number of sides for your dice: ");
+        int entry = scan.nextInt();
+        scan.nextLine();
+
+        System.out.print("Ready to roll? y/n");
+        String readyToRoll = scan.nextLine();
+
+        if (readyToRoll.equalsIgnoreCase("y")) {
+            System.out.println(diceRoll(entry));
+            System.out.println(diceRoll(entry));
+        }
+
+        else if (!readyToRoll.equalsIgnoreCase("y")){
+            getDice();
+        }
+
+        System.out.println("Would you like to play again?");
+        String keepGoing = scan.nextLine();
+
+        if (keepGoing.equalsIgnoreCase("y")) {
+            getDice();
+        } else {
+            System.out.println("Goodbye!");
+        }
+    }
+
+
 }
 
