@@ -10,6 +10,7 @@ public class MethodsExercises {
 //        System.out.println(multiplication(10,5));
 //        System.out.println(division(10, 2));
 //        System.out.println(remainder(9,2));
+
     }
 
 //1. Basic Arithmetic
@@ -39,23 +40,5 @@ public class MethodsExercises {
 
 //2.
 
-    public static void getInteger(int min, int max) {
-
-        Scanner scan = new Scanner(System.in);
-        boolean something = true;
-
-        do {
-            System.out.print("Please enter a number between 1 an 10: ");
-            int entry = scan.nextInt();
-
-            if (entry < min || entry > max){
-
-            }
-            else if (entry > min && entry < max) {
-                something = false;
-            }
-        } while(something);
-    }
 
 }
-
