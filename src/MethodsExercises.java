@@ -13,7 +13,9 @@ public class MethodsExercises {
 //        System.out.println(remainder(9,2));
 //        System.out.println(factorial(2));
 //        getFactorial();
-        getDice();
+//        getDice();
+        guessingGame();
+
 
     }
 
@@ -43,6 +45,8 @@ public class MethodsExercises {
 
 
 //2.
+
+// Factorial Shtuff
 
     public static long factorial(long a) {
     if (a == 1) {
@@ -76,6 +80,8 @@ public class MethodsExercises {
             }
         }
     }
+
+// Dice Rolling
 
     public static int diceRoll (int a) {
         Random numb = new Random();
@@ -112,5 +118,38 @@ public class MethodsExercises {
     }
 
 
+//Game Development 101
+
+    public static int rando () {
+        Random rando = new Random();
+        int randResult = rando.nextInt(100) + 1;
+        return randResult;
+    }
+
+    public static void guessingGame () {
+        Scanner scan = new Scanner(System.in);
+        int target = rando();
+        boolean end = true;
+
+        System.out.println("Welcome to the Random Number Guessing Game.");
+        System.out.println();
+
+        do {
+            System.out.print("Please guess a number between 1 and 100: ");
+            int value = scan.nextInt();
+            scan.nextLine();
+
+            if (value < target) {
+                System.out.println("Guess Higher");
+            }
+            else if (value > target) {
+                System.out.println("Guess Lower");
+            }
+            else {
+                System.out.println("Good Guess!");
+                end = false;
+            }
+        } while (end);
+    }
 }
 
