@@ -10,6 +10,10 @@ public class Input {
         this.scan = new Scanner(System.in);
     }
 
+    public Scanner getScan() {
+        return scan;
+    }
+
     public String getString() {
         System.out.print("Please input a string: ");
         String entry = scan.next();
