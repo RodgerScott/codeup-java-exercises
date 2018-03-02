@@ -3,7 +3,7 @@ public class RestaurantDish {
     private String nameOfDish;
     private boolean wouldRecommend;
 
-    public RestaurantDish() {};
+    public RestaurantDish() {}
 
     public RestaurantDish(String name, int cost, boolean good) {
         this.nameOfDish = name;
@@ -11,7 +11,7 @@ public class RestaurantDish {
         this.wouldRecommend = good;
     }
 
-    private String eat() {
+    public String eat() {
         return "Nom nom nom!";
     }
 
