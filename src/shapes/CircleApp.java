@@ -1,16 +1,14 @@
 package shapes;
 
 import java.util.Scanner;
-
-//import util.Input;
+import util.Input;
 
 public class CircleApp {
 
 
     public static void main(String[] args) {
 
-
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Input().getScan();
 
         System.out.print("Please enter the radius of your circle: ");
         double entry = scan.nextDouble();
