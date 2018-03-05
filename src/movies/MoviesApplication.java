@@ -2,11 +2,13 @@ package movies;
 
 import java.util.Scanner;
 import util.Input;
-import java.util.Arrays;
+import java.util.ArrayList;
 
 public class MoviesApplication {
 
     public static void main(String[] args) {
+
+
 
         Input keepGoing = new Input();
 
@@ -23,6 +25,7 @@ public class MoviesApplication {
             System.out.println("3 - view movies in the drama category");
             System.out.println("4 - view movies in the horror category");
             System.out.println("5 - view movies in the sci-fi category");
+            System.out.println("6 - add a new movie");
             System.out.println();
             System.out.println("Enter your choice: ");
             choice = scan.nextInt();
@@ -67,6 +70,10 @@ public class MoviesApplication {
                             System.out.println(MoviesArray.findAll()[i].getTitle() + "--" + MoviesArray.findAll()[i].getGenre());
                         }
                     }
+                    System.out.println();
+                    break;
+                case 6:
+                    System.out.println("Please enter a new movie in the format: title, genre");
                     System.out.println();
                     break;
             }
