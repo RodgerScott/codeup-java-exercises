@@ -22,7 +22,7 @@ public class Input {
 
     public boolean yesNo() {
         boolean value;
-        System.out.print("Please enter \"y\" \\ \"yes\" or \"n\"." );
+        System.out.print("Search again? Please enter \"y\" \\ \"yes\" or \"n\"." );
         String entry = scan.next();
         if (entry.equalsIgnoreCase("y") || entry.equalsIgnoreCase("yes")) {
             value = true;
