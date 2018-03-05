@@ -2,6 +2,7 @@ package movies;
 
 import java.util.Scanner;
 import util.Input;
+import java.util.Arrays;
 
 public class MoviesApplication {
 
@@ -27,7 +28,9 @@ public class MoviesApplication {
             case 0:
                 break;
             case 1:
-                System.out.println("All Movies");
+                for (int i = 0; i < MoviesArray.findAll().length; i++) {
+                    System.out.println();
+                }
                 break;
             case 2:
                 System.out.println("Animated");
