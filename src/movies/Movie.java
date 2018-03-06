@@ -27,11 +27,14 @@ public class Movie {
     }
 
     public static void getGenre (String genre) {
-
+        System.out.println("=========================================");
         for (Movie movie : MoviesArray.findAll()) {
+
             if (movie.getGenre().equalsIgnoreCase(genre)) {
-                System.out.println(movie.getTitle() + " -- " + movie.getGenre());
+                System.out.printf("|" + "%-10s", movie.getTitle() + " -- " + movie.getGenre() + "\n");
+                System.out.println("=========================================");
             }
         }
-    };
+    }
 }
+
