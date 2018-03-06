@@ -25,4 +25,13 @@ public class Movie {
         this.title = title;
         this.genre = genre;
     }
+
+    public static void getGenre (String genre) {
+
+        for (Movie movie : MoviesArray.findAll()) {
+            if (movie.getGenre().equalsIgnoreCase(genre)) {
+                System.out.println(movie.getTitle() + " -- " + movie.getGenre());
+            }
+        }
+    };
 }

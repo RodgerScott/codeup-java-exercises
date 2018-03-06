@@ -12,6 +12,7 @@ public class MoviesApplication {
 
         Movie[] movieList = MoviesArray.findAll();
 
+
         do {
 
             Scanner scan = new Scanner(System.in);
@@ -41,35 +42,19 @@ public class MoviesApplication {
                     System.out.println();
                     break;
                 case 2:
-                    for (Movie movie : movieList) {
-                        if (movie.getGenre().equalsIgnoreCase("animated")) {
-                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
-                        }
-                    }
+                    Movie.getGenre("animated");
                     System.out.println();
                     break;
                 case 3:
-                    for (Movie movie : movieList) {
-                        if (movie.getGenre().equalsIgnoreCase("drama")) {
-                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
-                        }
-                    }
+                    Movie.getGenre("drama");
                     System.out.println();
                     break;
                 case 4:
-                    for (Movie movie : movieList) {
-                        if (movie.getGenre().equalsIgnoreCase("horror")) {
-                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
-                        }
-                    }
+                    Movie.getGenre("horror");
                     System.out.println();
                     break;
                 case 5:
-                    for (Movie movie : movieList) {
-                        if (movie.getGenre().equalsIgnoreCase("scifi")) {
-                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
-                        }
-                    }
+                    Movie.getGenre("scifi");
                     System.out.println();
                     break;
                 case 6:
@@ -80,3 +65,6 @@ public class MoviesApplication {
         } while (keepGoing.yesNo());
     }
 }
+
+
+
