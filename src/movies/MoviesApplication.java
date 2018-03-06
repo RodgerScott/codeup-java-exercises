@@ -8,8 +8,6 @@ public class MoviesApplication {
 
     public static void main(String[] args) {
 
-
-
         Input keepGoing = new Input();
 
         do {
