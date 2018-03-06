@@ -36,5 +36,20 @@ public class Movie {
             }
         }
     }
+
+    public static void searchByTitle (String title) {
+        int counter = 0;
+        for (Movie movie: MoviesArray.findAll()) {
+            if (movie.getTitle().contains(title)) {
+                System.out.println(movie.getTitle() + " " + movie.getGenre());
+                System.out.println();
+                counter++;
+            }
+        }
+        if (counter == 0) {
+            System.out.println("I am sorry, no results were found.");
+            System.out.println();
+        }
+    }
 }
 

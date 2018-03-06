@@ -26,7 +26,7 @@ public class MoviesApplication {
             System.out.println("3 - view movies in the drama category");
             System.out.println("4 - view movies in the horror category");
             System.out.println("5 - view movies in the sci-fi category");
-            System.out.println("6 - add a new movie");
+            System.out.println("6 - Search for a Title");
             System.out.println();
             System.out.println("Enter your choice: ");
             choice = scan.nextInt();
@@ -58,8 +58,9 @@ public class MoviesApplication {
                     System.out.println();
                     break;
                 case 6:
-                    System.out.println("Please enter a new movie in the format: title, genre");
-                    System.out.println();
+                    System.out.println("What is the title of the movie you are searching for? ");
+                    String entry = scan.nextLine();
+                    Movie.searchByTitle(entry);
                     break;
             }
         } while (keepGoing.yesNo());
