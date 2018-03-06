@@ -12,7 +12,6 @@ public class MoviesApplication {
 
         Movie[] movieList = MoviesArray.findAll();
 
-
         do {
 
             Scanner scan = new Scanner(System.in);
@@ -36,39 +35,39 @@ public class MoviesApplication {
                 case 0:
                     break;
                 case 1:
-                    for (int i = 0; i < movieList.length; i++) {
-                        System.out.println(movieList[i].getTitle() + "--" + movieList[i].getGenre());
+                    for (Movie movie : movieList) {
+                        System.out.println(movie.getTitle() + " -- " + movie.getGenre());
                     }
                     System.out.println();
                     break;
                 case 2:
-                    for (int i = 0; i < movieList.length; i++) {
-                        if (movieList[i].getGenre().equalsIgnoreCase("animated")) {
-                            System.out.println(movieList[i].getTitle() + "--" + movieList[i].getGenre());
+                    for (Movie movie : movieList) {
+                        if (movie.getGenre().equalsIgnoreCase("animated")) {
+                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
                         }
                     }
                     System.out.println();
                     break;
                 case 3:
-                    for (int i = 0; i < movieList.length; i++) {
-                        if (movieList[i].getGenre().equalsIgnoreCase("drama")) {
-                            System.out.println(movieList[i].getTitle() + "--" + movieList[i].getGenre());
+                    for (Movie movie : movieList) {
+                        if (movie.getGenre().equalsIgnoreCase("drama")) {
+                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
                         }
                     }
                     System.out.println();
                     break;
                 case 4:
-                    for (int i = 0; i < movieList.length; i++) {
-                        if (movieList[i].getGenre().equalsIgnoreCase("horror")) {
-                            System.out.println(movieList[i].getTitle() + "--" + movieList[i].getGenre());
+                    for (Movie movie : movieList) {
+                        if (movie.getGenre().equalsIgnoreCase("horror")) {
+                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
                         }
                     }
                     System.out.println();
                     break;
                 case 5:
-                    for (int i = 0; i < movieList.length; i++) {
-                        if (movieList[i].getGenre().equalsIgnoreCase("scifi")) {
-                            System.out.println(movieList[i].getTitle() + "--" + movieList[i].getGenre());
+                    for (Movie movie : movieList) {
+                        if (movie.getGenre().equalsIgnoreCase("scifi")) {
+                            System.out.println(movie.getTitle() + " -- " + movie.getGenre());
                         }
                     }
                     System.out.println();
