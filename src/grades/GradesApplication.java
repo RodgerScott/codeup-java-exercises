@@ -47,6 +47,7 @@ public class GradesApplication {
             System.out.println();
             System.out.println(githubUsernames.keySet());
 
+
         do {
             System.out.println();
             System.out.println("Which student would you like to learn more about?");
@@ -56,13 +57,14 @@ public class GradesApplication {
                 System.out.println("Name: " + githubUsernames.get(entry).getName());
                 System.out.println("Github user: " + entry);
                 System.out.println("Grade Average: " + githubUsernames.get(entry).getGradeAverage());
-                System.out.println("All Grades: ");
+                System.out.println("All Grades: " + githubUsernames.get(entry).getGrades());
             } else {
                 System.out.println("I'm sorry, this person does not exist.");
             }
             System.out.println();
+            System.out.println();
 
-        } while(keepGoing.yesNo());
+        } while(keepGoing.yesNo("Would you like to look for another student?"));
 
 
 //        System.out.println(ted.getName());

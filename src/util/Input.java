@@ -20,9 +20,9 @@ public class Input {
         return entry;
     }
 
-    public boolean yesNo() {
+    public boolean yesNo(String prompt) {
         boolean value;
-        System.out.print("Search again? Please enter \"y\" \\ \"yes\" or \"n\"." );
+        System.out.print(prompt);
         String entry = scan.next();
         if (entry.equalsIgnoreCase("y") || entry.equalsIgnoreCase("yes")) {
             value = true;

@@ -63,7 +63,7 @@ public class MoviesApplication {
                     Movie.searchByTitle(entry);
                     break;
             }
-        } while (keepGoing.yesNo());
+        } while (keepGoing.yesNo("Would you like to search for another student?"));
     }
 }
 
