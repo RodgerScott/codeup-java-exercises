@@ -2,9 +2,12 @@ package grades;
 
 import javafx.scene.control.TextInputDialog;
 
+import java.awt.*;
 import java.util.HashMap;
 import java.util.Scanner;
 import util.Input;
+
+import javax.naming.Name;
 
 public class GradesApplication {
 
@@ -62,7 +65,15 @@ public class GradesApplication {
                 System.out.println("I'm sorry, this person does not exist.");
             }
             System.out.println();
-            System.out.println();
+            System.out.println("Would you like to see all Students Grades? y/n");
+            String seeIt = scan.next();
+
+            if (seeIt.equalsIgnoreCase("y")) {
+                for (Student totesUsers: githubUsernames.values()) {
+                    System.out.println(totesUsers.getName() + " " + totesUsers.getGrades());
+
+                }
+            }
 
         } while(keepGoing.yesNo("Would you like to look for another student?"));
 

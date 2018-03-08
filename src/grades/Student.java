@@ -23,10 +23,6 @@ public class Student {
         return this.grades;
     }
 
-//    public ArrayList<Integer> getAllGrades() {
-//        for (int i = 0; i < grades.z)
-//    }
-
     public double getGradeAverage() {
         int total = 0;
         for (int i = 0; i < grades.size(); i++) {
