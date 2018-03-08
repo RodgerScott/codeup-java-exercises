@@ -40,7 +40,7 @@ public class GradesApplication {
 
         githubUsernames.put("TedtheCodeDestroyer", ted);
         githubUsernames.put("OOPsIDidItAgain", greg);
-        githubUsernames.put("Flinstoner", fred);
+        githubUsernames.put("Flinstonio", fred);
         githubUsernames.put("GaildaCodeSnail", gail);
 
 
@@ -69,10 +69,20 @@ public class GradesApplication {
             String seeIt = scan.next();
 
             if (seeIt.equalsIgnoreCase("y")) {
-                for (Student totesUsers: githubUsernames.values()) {
+                for (Student totesUsers : githubUsernames.values()) {
                     System.out.println(totesUsers.getName() + " " + totesUsers.getGrades());
-
                 }
+            }
+            System.out.println();
+            System.out.println("Would you like to see the average grade for all students?");
+            String totalAvg = scan.next();
+
+            if (totalAvg.equalsIgnoreCase("y")) {
+                double totesMcgoats = 0;
+                for (Student totesUsers : githubUsernames.values()) {
+                    totesMcgoats += totesUsers.getGradeAverage();
+                }
+                System.out.println(totesMcgoats / githubUsernames.size());
             }
 
         } while(keepGoing.yesNo("Would you like to look for another student?"));
