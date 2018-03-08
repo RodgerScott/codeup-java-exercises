@@ -56,6 +56,7 @@ public class GradesApplication {
                 System.out.println("Name: " + githubUsernames.get(entry).getName());
                 System.out.println("Github user: " + entry);
                 System.out.println("Grade Average: " + githubUsernames.get(entry).getGradeAverage());
+                System.out.println("All Grades: ");
             } else {
                 System.out.println("I'm sorry, this person does not exist.");
             }
