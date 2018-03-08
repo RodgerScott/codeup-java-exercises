@@ -14,10 +14,10 @@ public class Input {
         return scan;
     }
 
-    public String getString() {
-        System.out.print("Please input a string: ");
-        String entry = scan.next();
-        return entry;
+    public String getString(String prompt) {
+        System.out.print(prompt);
+        return scan.next();
+
     }
 
     public boolean yesNo(String prompt) {
@@ -44,8 +44,7 @@ public class Input {
 
     public int getInt() {
         System.out.print("Please enter an integer value: ");
-        int entry = scan.nextInt();
-        return entry;
+        return scan.nextInt();
     }
 
     double getDouble(double min, double max) {
@@ -60,8 +59,7 @@ public class Input {
 
     double getDouble() {
         System.out.print("Please enter a decimal value: ");
-        double entry = scan.nextDouble();
-        return entry;
+        return scan.nextDouble();
     }
 }
 
