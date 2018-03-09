@@ -74,16 +74,11 @@ public class Input {
         }
     }
 
-//    public int getBinary() {
-//        System.out.println("Please enter a binary number: ");
-//        String entry = scan.next();
-//    }
-
     public int getHex(String prompt) {
         System.out.print(prompt);
         String entry = scan.next();
         try {
-           return Integer.valueOf(entry);
+           return Integer.valueOf(entry, 16);
         } catch(NumberFormatException e) {
             System.out.println("Bro, please read the prompt and try again.");
             return getHex(prompt);
