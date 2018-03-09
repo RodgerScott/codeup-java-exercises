@@ -42,18 +42,18 @@ public class Input {
         }
     }
 
-    public int getInt() {
-        System.out.print("Please enter an integer value: ");
+    public int getInt(String prompt) {
+        System.out.print(prompt);
         String entry = scan.next();
         try {
             return Integer.valueOf(entry);
         } catch (NumberFormatException e) {
             System.out.println("Bro, I was asking for an integer. Try again.");
-            return getInt();
+            return getInt(prompt);
         }
     }
 
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         System.out.print("Please enter a decimal between " + min + " and " + max + ".");
         double entry = scan.nextDouble();
         if (entry < min || entry > max) {
@@ -63,14 +63,14 @@ public class Input {
         }
     }
 
-    public double getDouble() {
-        System.out.print("Please enter a number with or without decimals: ");
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
         String entry = scan.next();
         try {
             return Double.valueOf(entry);
         } catch(NumberFormatException e) {
             System.out.println("Bro, please read the prompt and try again.");
-            return getDouble();
+            return getDouble(prompt);
         }
     }
 
@@ -79,16 +79,14 @@ public class Input {
 //        String entry = scan.next();
 //    }
 
-    public int getHex() {
-        System.out.print("Please enter a hexidecimal number: ");
-        String entry = scan.nextLine();
+    public int getHex(String prompt) {
+        System.out.print(prompt);
+        String entry = scan.next();
         try {
-            int ted = Integer.valueOf(entry);
-            return Integer.valueOf(ted);
-
+           return Integer.valueOf(entry);
         } catch(NumberFormatException e) {
             System.out.println("Bro, please read the prompt and try again.");
-            return getHex();
+            return getHex(prompt);
         }
     }
 }
