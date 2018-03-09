@@ -44,7 +44,13 @@ public class Input {
 
     public int getInt() {
         System.out.print("Please enter an integer value: ");
-        return scan.nextInt();
+        String entry = scan.next();
+        try {
+            return Integer.valueOf(entry);
+        } catch (NumberFormatException e) {
+            System.out.println("Bro, I was asking for an integer. Try again.");
+            return getInt();
+        }
     }
 
     double getDouble(double min, double max) {
@@ -57,9 +63,33 @@ public class Input {
         }
     }
 
-    double getDouble() {
-        System.out.print("Please enter a decimal value: ");
-        return scan.nextDouble();
+    public double getDouble() {
+        System.out.print("Please enter a number with or without decimals: ");
+        String entry = scan.next();
+        try {
+            return Double.valueOf(entry);
+        } catch(NumberFormatException e) {
+            System.out.println("Bro, please read the prompt and try again.");
+            return getDouble();
+        }
+    }
+
+//    public int getBinary() {
+//        System.out.println("Please enter a binary number: ");
+//        String entry = scan.next();
+//    }
+
+    public int getHex() {
+        System.out.print("Please enter a hexidecimal number: ");
+        String entry = scan.nextLine();
+        try {
+            int ted = Integer.valueOf(entry);
+            return Integer.valueOf(ted);
+
+        } catch(NumberFormatException e) {
+            System.out.println("Bro, please read the prompt and try again.");
+            return getHex();
+        }
     }
 }
 
