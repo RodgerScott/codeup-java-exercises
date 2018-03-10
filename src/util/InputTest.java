@@ -14,7 +14,7 @@ public class InputTest {
 //        System.out.println(test.getInt());
 //        System.out.println(test.getDouble(1,10));
 //        System.out.println(test.getDouble());
-        System.out.println(test.getHex("Enter a number: "));
+        System.out.println(test.getBinary("Please enter a binary value: "));
 
     }
 }

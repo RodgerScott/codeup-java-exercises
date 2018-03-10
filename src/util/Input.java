@@ -84,6 +84,17 @@ public class Input {
             return getHex(prompt);
         }
     }
+
+    public int getBinary(String prompt) {
+        System.out.println(prompt);
+        String entry = scan.next();
+        try {
+            return Integer.valueOf(entry, 2);
+        } catch(NumberFormatException e) {
+            System.out.println("Gotta read the prompt, yo.");
+            return getBinary(prompt);
+        }
+    }
 }
 
 
