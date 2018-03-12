@@ -28,7 +28,7 @@ public class FileHelper {
 
         try {
             if (Files.notExists(Paths.get(filename))) {
-                Files.write(Paths.get("src", filename), contents);
+                Files.write(Paths.get(filename), contents);
             }
             else {
                 System.out.println("File already exists");
@@ -61,12 +61,10 @@ public class FileHelper {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Please enter in a file name: ");
-        String entry = scan.next();
-        makeExciting(entry);
-
-//        System.out.println("Please enter some contents: ");
-//        List<String> revoList = Arrays.asList(scan.nextLine());
-//        spit(entry, revoList);
+        String entry = scan.nextLine();
+        System.out.println();
+        System.out.println("Please enter some contents: ");
+        List<String> revoList = Arrays.asList(scan.nextLine());
+        spit(entry, revoList);
     }
-
 }
