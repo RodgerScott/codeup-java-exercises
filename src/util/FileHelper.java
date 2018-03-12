@@ -15,12 +15,11 @@ public class FileHelper {
     public static List<String> slurp(String filepath) {
 
         try {
-            Path dataDirectory = Paths.get(filepath);
-            List<String> data = Files.readAllLines(dataDirectory);
-            return data;
+            return Files.readAllLines(Paths.get(filepath));
 
         } catch (IOException e){
             System.out.println(e.getMessage());
+            System.exit(1);
             return null;
         }
     }
@@ -28,8 +27,12 @@ public class FileHelper {
     public static void spit(String filename, List<String> contents) {
 
         try {
-            Files.write(Paths.get("src", filename), contents);
-
+            if (Files.notExists(Paths.get(filename))) {
+                Files.write(Paths.get("src", filename), contents);
+            }
+            else {
+                System.out.println("File already exists");
+            }
         } catch (IOException e){
             System.out.println(e.getMessage());
         }
@@ -37,20 +40,33 @@ public class FileHelper {
 
     public static void makeExciting(String filename) {
 
+        ArrayList<String> newFile = new ArrayList<>();
 
+        try {
+            List<String> oldFile = Files.readAllLines(Paths.get(filename));
+
+            for (String item : oldFile) {
+                newFile.add(item.toUpperCase() + "!");
+            }
+
+            Files.write(Paths.get(filename), newFile);
+        }
+        catch(IOException e) {
+            System.out.println(e.getMessage());
+            System.exit(1);
+        }
     }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Please enter in a file name: ");
-        String entry = scan.nextLine();
-        System.out.println();
+        String entry = scan.next();
+        makeExciting(entry);
 
-        System.out.println("Please enter some contents: ");
-        List<String> revoList = Arrays.asList(scan.nextLine());
-        spit(entry, revoList);
+//        System.out.println("Please enter some contents: ");
+//        List<String> revoList = Arrays.asList(scan.nextLine());
+//        spit(entry, revoList);
     }
-
 
 }
